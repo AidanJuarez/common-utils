@@ -15,6 +15,10 @@
 # production
 /build
 
+/lib
+/types
+/es
+
 # misc
 .DS_Store
 *.pem

@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "declarationDir": "types",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "newLine": "lf",
+        "noEmit": false,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+        "outDir": "./lib",
+        "resolveJsonModule": true,
+        "rootDir": "./src",
+        "skipLibCheck": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "target": "ES2020",
+        "typeRoots": ["./node_modules/@types"],
+        "lib": [
+            "esnext",
+        ]
+    },
+    "include": [
+        "src/**/*.json",
+        "src/**/*.ts",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
