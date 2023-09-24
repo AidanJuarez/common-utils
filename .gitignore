@@ -41,8 +41,6 @@ next-env.d.ts
 .env
 sessions/*
 
-.husky/
-
 launcher.js
 launcher.js.map
 

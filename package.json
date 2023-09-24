@@ -14,7 +14,7 @@
     "build": "rm -rf ./lib ./types ./es && tsc && tsc -p tsconfig-ejs.json",
     "lint": "eslint ./src --ext .js,.ts,.json --fix",
     "lint-staged": "lint-staged",
-    "prepare": "husky install && husky add .husky/pre-commit 'npm run lint-staged'",
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
