@@ -3,11 +3,6 @@ export enum TransferDirection {
     OUT = 2
 }
 
-export enum TransferStatus {
-    INIT = 1,
-    SELLOUT = 2
-}
-
 export enum TransferSource {
     USER = 1,
     TRACK = 2,
