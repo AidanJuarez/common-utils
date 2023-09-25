@@ -18,7 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "bignumber.js": "^9.1.2"
+    "bignumber.js": "^9.1.2",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@types/node": "^18.17.17",

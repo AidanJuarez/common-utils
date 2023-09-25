@@ -43,7 +43,7 @@ export class Chain {
             case 'base':
                 return Chain.Base;
             default:
-                throw new Error('Unknown chain name');
+                return null;
         }
     }
 }

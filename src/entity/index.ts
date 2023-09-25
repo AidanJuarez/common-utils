@@ -1,4 +1,5 @@
 export * from './base';
+export * from './chain_info';
 export * from './common';
 export * from './order/user_method_sniper_order';
 export * from './token/token';
