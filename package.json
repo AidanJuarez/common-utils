@@ -1,7 +1,7 @@
 {
   "name": "@lookonchain/common-utils",
   "version": "0.0.3",
-  "description": "",
+  "description": "## 脚本介绍",
   "files": [
     "es",
     "lib",
@@ -54,5 +54,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AidanJuarez/common-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AidanJuarez/common-utils/issues"
+  },
+  "homepage": "https://github.com/AidanJuarez/common-utils#readme"
 }
