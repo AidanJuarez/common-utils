@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rm -rf ./lib ./types ./es && tsc && tsc -p tsconfig-ejs.json",
     "lint": "eslint ./src --ext .js,.ts,.json --fix",
-    "lint:lint-staged": "lint-staged",
+    "lint-staged": "lint-staged",
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
