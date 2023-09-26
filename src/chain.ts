@@ -1,4 +1,5 @@
 export class Chain {
+    static readonly Unknown = new Chain('Unknown', '', 0, '', '', '', '', '');
     static readonly Ethereum = new Chain('Ethereum', 'ETH', 1, '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 'etherscan.io', 'ethereum', 'eth', 'ethereum');
     static readonly Base = new Chain('Base', 'ETH', 8453, '0x4200000000000000000000000000000000000006', 'basescan.org', 'base', 'base', 'base');
 
@@ -43,7 +44,7 @@ export class Chain {
             case 'base':
                 return Chain.Base;
             default:
-                return null;
+                return Chain.Unknown;
         }
     }
 }
