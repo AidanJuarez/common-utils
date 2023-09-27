@@ -5,7 +5,6 @@ interface UserWalletAttr extends BaseAttrs {
     chat_id: string;
     chain: string;
     wallet_address: string;
-    private_key: string;
     name: string;
     settings: UserSetting;
     is_default: number;
@@ -31,7 +30,7 @@ export class UserWallet extends BaseEntity implements UserWalletAttr {
 
     public static fromJson(json: string | object) {
         const wallet = new UserWallet();
-        const result = UserWallet.tryParseJSON<UserWallet>(json);
+        const result = UserWallet.tryParseJSON(json);
         if (result === null) {
             return wallet;
         }

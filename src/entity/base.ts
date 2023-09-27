@@ -13,13 +13,12 @@ export class BaseEntity {
         return this;
     }
 
-    public static tryParseJSON<T extends object>(json: any): Partial<T> | null {
-        let result: Partial<T> | null = null;
+    public static tryParseJSON(json: any) {
         if (typeof json === 'string') {
             try {
-                result = JSON.parse(json);
+                return JSON.parse(json);
             } catch (err) {}
         }
-        return result;
+        return json;
     }
 }

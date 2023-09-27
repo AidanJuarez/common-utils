@@ -33,7 +33,7 @@ export class UserMethodSniperOrder extends BaseEntity implements UserMethodSnipe
 
     public static fromJson(json: any) {
         const order = new UserMethodSniperOrder();
-        const result = UserMethodSniperOrder.tryParseJSON<UserMethodSniperOrder>(json);
+        const result = UserMethodSniperOrder.tryParseJSON(json);
         if (result === null) {
             return order;
         }
