@@ -51,4 +51,8 @@ export class Chain {
                 return Chain.Unknown;
         }
     }
+
+    public toString() {
+        return this.name;
+    }
 }
