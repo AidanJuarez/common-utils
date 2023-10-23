@@ -95,23 +95,3 @@ export function showPercentage(value: BigNumber): string {
     }
     return `${value.toFixed(2).replace(/(?:\.0+|(\.\d+?)0+)$/, '$1')}%`;
 }
-
-export function delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-export async function retry<T>(fn: () => Promise<T>, times: number, delay_ms: number): Promise<T> {
-    for (let i = 0; i < times; i++) {
-        try {
-            return await fn();
-        } catch (err) {
-            if (i === times - 1) {
-                throw err;
-            }
-            if (delay_ms > 0) {
-                await delay(delay_ms);
-            }
-        }
-    }
-    throw new Error('execution failed');
-}
