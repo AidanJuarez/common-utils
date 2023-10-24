@@ -46,7 +46,7 @@ export class Pool extends BaseEntity implements PoolAttr {
 
     public static fromJson(json: any) {
         const pool = new Pool();
-        const result = Pool.tryParseJSON<Pool>(json);
+        const result = Pool.tryParseJSON(json);
         if (result === null) {
             return pool;
         }

@@ -24,7 +24,7 @@ export class UserWalletTokenBalance extends BaseEntity implements UserWalletToke
 
     public static fromJson(json: any) {
         const balance = new UserWalletTokenBalance();
-        const result = UserWalletTokenBalance.tryParseJSON<UserWalletTokenBalance>(json);
+        const result = UserWalletTokenBalance.tryParseJSON(json);
         if (result === null) {
             return balance;
         }

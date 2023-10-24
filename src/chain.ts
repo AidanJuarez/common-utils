@@ -1,5 +1,6 @@
 export class Chain {
-    static readonly Ethereum = new Chain('Ethereum', 'ETH', 1, '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 'etherscan.io', 'ethereum', 'eth', 'ethereum');
+    static readonly Unknown = new Chain('Unknown', '', 0, '', '', '', '', '');
+    static readonly Ethereum = new Chain('Ethereum', 'ETH', 1, '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 'etherscan.io', 'ethereum', 'ethereum', 'ethereum');
     static readonly Base = new Chain('Base', 'ETH', 8453, '0x4200000000000000000000000000000000000006', 'basescan.org', 'base', 'base', 'base');
 
     name: string;
@@ -35,6 +36,10 @@ export class Chain {
         return `https://${this.scan_domain}${path}/${params}`;
     }
 
+    public buildDexscreenerUrl(token_address: string) {
+        return `https://dexscreener.com/${this.dexscreener_name}/${token_address}`;
+    }
+
     static fromString(name: string) {
         switch (name.toLowerCase()) {
             case 'ethereum':
@@ -43,7 +48,11 @@ export class Chain {
             case 'base':
                 return Chain.Base;
             default:
-                return null;
+                return Chain.Unknown;
         }
+    }
+
+    public toString() {
+        return this.name;
     }
 }

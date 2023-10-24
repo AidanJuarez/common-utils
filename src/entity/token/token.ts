@@ -50,7 +50,7 @@ export class Token extends BaseEntity implements TokenAttr {
 
     public static fromJson(json: any) {
         const token = new Token();
-        const result = Token.tryParseJSON<Token>(json);
+        const result = Token.tryParseJSON(json);
         if (result === null) {
             return token;
         }
